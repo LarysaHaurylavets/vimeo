@@ -48,6 +48,12 @@ defineSupportCode(({ Given, When, setDefaultTimeout }) => {
         return browser.executeScript('window.scrollBy(0,' + counter + ')');
     });
 
+    When(/^I type "(.*)" in "(.*)" for new user$/, (text, element) => {
+        let parsedText = (memory[text]) ? memory[text] : text;
+        let now = new Date();
+        return query.getProtractorElement(element).sendKeys('test'+now.getTime()+parsedText);
+    });
+
 
 });
 
