@@ -1,7 +1,8 @@
-@smoke
+@smoke 
 Feature: Download page
   As a user I want be able to click download and get info about app
 
+@login @logout
 Scenario: Validation the download page of Cameo application 
     Given I am on "Home" page
     When I click on "Download" button

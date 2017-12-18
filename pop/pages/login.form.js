@@ -12,4 +12,3 @@ class LoginForm {
 }
 
 module.exports = LoginForm;
-//input[value='Log in with email']

@@ -26,15 +26,28 @@ defineSupportCode(({Given, When, setDefaultTimeout}) =>{
         }
     });
 
-    When(/^I type "(.*)" in "(.*)"$/, (text, element) => {
-        // check if we have imported constant in Memory object
+    When(/^I type "(.*)" in "(.*)"$/, (text, element) => {        
         let parsedText = (memory[text]) ? memory[text] : text;
-
         return query.getProtractorElement(element).sendKeys(parsedText);
     });
 
     When(/^I clear "(.*)"$/, (element) => {
         return query.getProtractorElement(element).clear();
     });
+
+    When(/^I click browser (refresh|back|forward) button$/, (select) => {
+        return browser.driver.navigate()[select]();
+    });
+
+    When(/^I scroll up$/, () => {
+        return browser.executeScript('window.scrollTo(0,0)');
+    });
+    
+    When(/^I scroll down "(.*)" time\(s\)$/, (time) => {
+        let counter = 200 * time;
+        return browser.executeScript('window.scrollBy(0,' + counter + ')');
+    });
+    
    
 });
+
