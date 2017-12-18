@@ -9,7 +9,6 @@ class Query {
     }
 
     /**
-     *
      * @param elementName {String} Name of the component in page object
      * @returns {ElementFinder || ElementArrayFinder}
      */

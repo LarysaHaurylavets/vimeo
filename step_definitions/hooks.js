@@ -1,23 +1,23 @@
-const {defineSupportCode} = require('cucumber');
+const { defineSupportCode } = require('cucumber');
 const path = require('path');
 const query = require(path.resolve('./framework/helper/query'));
 const state = require(path.resolve('./framework/helper/state'));
 const Memory = require(path.resolve('./framework/helper/memory'));
 const memory = new Memory(path.resolve('./config/creds.json'));
 
-defineSupportCode(function ({Before, After}) {
+defineSupportCode(function ({ Before, After }) {
 
-    Before({tags: '@login'}, () => {
+    Before({ tags: '@login' }, () => {
         state.setState('Home');
 
         return browser.get(state.getUrl())
-            .then(()=>{
+            .then(() => {
                 return browser.wait(EC.presenceOf(query.getProtractorElement('Login')));
             })
             .then(() => {
                 return query.getProtractorElement('Login').click();
             })
-            .then(()=>{
+            .then(() => {
                 return browser.wait(EC.presenceOf(query.getProtractorElement('Form in Login Form')));
             })
             .then(() => {
@@ -34,13 +34,13 @@ defineSupportCode(function ({Before, After}) {
             })
             .then(() => {
                 return query.getProtractorElement('Login With Email in Login Form').click();
-            })              
-            .then(()=> {
+            })
+            .then(() => {
                 return browser.wait(EC.invisibilityOf(query.getProtractorElement('User Avatar in User')));
             });
     });
 
-    After({tags: '@logout'}, () => {
+    After({ tags: '@logout' }, () => {
         state.setState('Home');
         return browser.wait(EC.presenceOf(query.getProtractorElement('User Avatar in User')))
             .then(() => {
@@ -52,10 +52,10 @@ defineSupportCode(function ({Before, After}) {
             .then(() => {
                 return browser.wait(EC.presenceOf(query.getProtractorElement('Login')));
             })
-            
-    }); 
 
-    
+    });
 
-    
+
+
+
 });

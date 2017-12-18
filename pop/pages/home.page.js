@@ -19,14 +19,14 @@ class HomePage extends MasterPage {
         this['User Menu'] = new UserMenu();
 
         //elements of page
-        this['Intro']=element(by.css('#intro'));
-        this['Phone']=element(by.css('#phone'));
-        this['Features']=element(by.css('#features'));
-        this['Themes']=element(by.css('#themes'));
-        this['Soundtracks']=element(by.css('#soundtracks'));
-        this['Videos']=element(by.css('#videos'));
-        this['Creators']=element(by.css('#creators'));
-        this['Download']=element(by.css('#download'));
+        this['Intro'] = element(by.css('#intro'));
+        this['Phone'] = element(by.css('#phone'));
+        this['Features'] = element(by.css('#features'));
+        this['Themes'] = element(by.css('#themes'));
+        this['Soundtracks'] = element(by.css('#soundtracks'));
+        this['Videos'] = element(by.css('#videos'));
+        this['Creators'] = element(by.css('#creators'));
+        this['Download'] = element(by.css('#download'));
     }
 }
 

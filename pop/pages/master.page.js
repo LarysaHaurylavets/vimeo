@@ -1,9 +1,9 @@
 'use strict';
 
 class MasterPage {
-    constructor(){
+    constructor() {
         this.url = browser.get;
-        this['Title']=element(by.css('title'));
+        this['Title'] = element(by.css('title'));
     }
 }
 

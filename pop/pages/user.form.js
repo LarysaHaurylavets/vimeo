@@ -6,4 +6,5 @@ class UserForm {
         this['User Menu'] = element(by.css('#topnav_user_dropdown'));
     }
 }
+
 module.exports = UserForm;

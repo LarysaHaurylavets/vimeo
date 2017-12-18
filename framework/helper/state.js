@@ -1,6 +1,7 @@
 const path = require('path');
 const world = require(path.resolve('./pop/world'));
 
+
 class State {
     constructor() {
         this.state = {};

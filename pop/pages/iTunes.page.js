@@ -2,8 +2,8 @@
 
 const MasterPage = require('./master.page');
 
-class ItunesPage extends MasterPage{
-    constructor(){
+class ItunesPage extends MasterPage {
+    constructor() {
         super();
         this.url = 'https://itunes.apple.com/us/app/cameo-video-editor-movie-maker/id988821661?mt=8';
         this['Content Page'] = element(by.css('#content'));

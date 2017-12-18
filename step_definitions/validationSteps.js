@@ -25,8 +25,8 @@ defineSupportCode(({ Then, setDefaultTimeout }) => {
 
     Then(/^"(.*)" element should be visible$/, (element) => {
         return expect(query.getProtractorElement(element).isPresent()).to.eventually.be.true;
-    }); 
-    
+    });
+
     Then(/^Text of element "(.*)" should (not )?be "(.*)"$/, (element, isNot, value) => {
         if (isNot) {
             return expect(query.getProtractorElement(element).getText()).to.not.equal(value);
@@ -34,6 +34,6 @@ defineSupportCode(({ Then, setDefaultTimeout }) => {
             return expect(query.getProtractorElement(element).getText()).to.eventually.eql(value);
         }
     });
-        
+
 });
 

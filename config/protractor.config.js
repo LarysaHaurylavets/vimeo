@@ -23,7 +23,7 @@ exports.config = {
     ],
     onPrepare: function () {
         browser.driver.manage().window().maximize(); //full screen mode
-        browser.waitForAngularEnabled(false); 
+        browser.waitForAngularEnabled(false);
         global.EC = protractor.ExpectedConditions;
         global.defTimeoutExplicit = 5000;
         global.timeoutEveryStep = 60 * 1000;

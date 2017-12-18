@@ -9,7 +9,7 @@ const ItunesPage = require('./pages/iTunes.page');
 
 class World {
     constructor() {
-        
+
         this['Home'] = new HomePage();
         this['Join Form'] = new JoinForm();
         this['Login Form'] = new LoginForm();
