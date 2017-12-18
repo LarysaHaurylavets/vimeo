@@ -30,7 +30,7 @@ exports.config = {
     },
     cucumberOpts: {
         require: [path.resolve('./step_definitions/**.js')],
-        //format: ['json:output/log.json'],
+        //format: ['pretty'],
         tags: ['@smoke']
     },
     allScriptsTimeout: 200000,
