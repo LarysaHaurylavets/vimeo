@@ -2,6 +2,7 @@
 Feature: Create ures page
 As user I will be able to create a new user via Join form
 
+
 Scenario: Create a new user in Vimeo
     Given I am on "Home" page
     When I click on "Join" button

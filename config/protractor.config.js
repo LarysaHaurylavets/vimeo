@@ -29,8 +29,7 @@ exports.config = {
         global.timeoutEveryStep = 60 * 1000;
     },
     cucumberOpts: {
-        require: [path.resolve('./step_definitions/**.js')],
-        //format: ['pretty'],
+        require: [path.resolve('./step_definitions/**.js')],        
         tags: ['@smoke']
     },
     allScriptsTimeout: 200000,

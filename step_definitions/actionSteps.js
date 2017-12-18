@@ -35,10 +35,6 @@ defineSupportCode(({ Given, When, setDefaultTimeout }) => {
         return query.getProtractorElement(element).clear();
     });
 
-    When(/^I click browser (refresh|back|forward) button$/, (select) => {
-        return browser.driver.navigate()[select]();
-    });
-
     When(/^I scroll up$/, () => {
         return browser.executeScript('window.scrollTo(0,0)');
     });

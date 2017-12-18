@@ -1,7 +1,8 @@
-
+@smoke
 Feature: Create ures page
 As user I will be able to login to vimeo
 
+  
   Scenario: Login to Vimeo
     Given I am on "Home" page
     When I click on "Login" button

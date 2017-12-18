@@ -6,6 +6,7 @@ const JoinForm = require('./pages/join.form');
 const LoginForm = require('./pages/login.form');
 const UserForm = require('./pages/user.form');
 const ItunesPage = require('./pages/iTunes.page');
+const UserMenu = require('./pages/user.menu');
 
 class World {
     constructor() {
@@ -15,6 +16,7 @@ class World {
         this['Login Form'] = new LoginForm();
         this['User'] = new UserForm();
         this['Itunes'] = new ItunesPage();
+        this['User Menu'] = new UserMenu();
 
     };
 

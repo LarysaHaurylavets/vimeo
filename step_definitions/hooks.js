@@ -5,9 +5,10 @@ const state = require(path.resolve('./framework/helper/state'));
 const Memory = require(path.resolve('./framework/helper/memory'));
 const memory = new Memory(path.resolve('./config/creds.json'));
 
+
 defineSupportCode(function ({ Before, After }) {
 
-    Before({ tags: '@login' }, () => {
+    Before({tags: '@login'}, () => {
         state.setState('Home');
 
         return browser.get(state.getUrl())
@@ -40,11 +41,15 @@ defineSupportCode(function ({ Before, After }) {
             });
     });
 
-    After({ tags: '@logout' }, () => {
+    After({tags: '@logout'}, () => {
         state.setState('Home');
-        return browser.wait(EC.presenceOf(query.getProtractorElement('User Avatar in User')))
+        return browser.get(state.getUrl())
+            .then(()=>{
+                return browser.wait(EC.presenceOf(query.getProtractorElement('User Avatar in User')));
+            })   
+             
             .then(() => {
-                return browser.actions().mouseMove('User Menu in User').perform();
+                return browser.actions().mouseMove('User Avatar in User').perform();
             })
             .then(() => {
                 return query.getProtractorElement('Log Out in User Menu').click();
