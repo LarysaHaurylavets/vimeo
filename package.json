@@ -4,8 +4,9 @@
   "description": "tests for vimeo.com/cameo",
   "main": "index.js",
   "scripts": {
-    "update": "webdriver-manager update",
-    "e2e": "protractor config/protractor.config.js"
+    "postinstall": "npm run update",
+    "update": "node node_modules/protractor/bin/webdriver-manager update",
+    "e2e": "node node_modules/protractor/bin/protractor config/protractor.config.js"
   },
   "author": "Larysa Haurylavets",
   "license": "ISC",
