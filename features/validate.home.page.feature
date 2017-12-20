@@ -14,14 +14,14 @@ As a user I want be able to scroll page and see images
 
         Examples:
             | section     | count   |
-            | Intro       | 5       |
-            | Phone       | 1       |
-            | Features    | 1       |
-            | Themes      | 1       |
+            | Intro       | 2.4     |
+            | Phone       | 1.5     |
+            | Features    | 6       |
+            | Themes      | 3       |
             | Soundtracks | 3       |
             | Videos      | 4       |
-            | Creators    | 5       |
-            | Download    | 5       |
+            | Creators    | 3       |
+            | Download    | 2       |
 
 
 
